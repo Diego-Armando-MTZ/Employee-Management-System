@@ -1,5 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("¡Hola Mundo! Mi primer archivo en la nube de GitHub");
+        // Creamos al objeto (instancia)
+        Empleado emp1 = new Empleado("Sadi", 25, "Desarrollador");
+
+        // Usamos sus métodos
+        emp1.presentarse();
+        emp1.ascender("Líder de Proyecto");
+        emp1.presentarse();
     }
 }
