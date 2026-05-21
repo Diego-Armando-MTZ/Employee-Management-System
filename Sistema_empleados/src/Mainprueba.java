@@ -1,10 +1,9 @@
+import mx.edu.unam.sistemaempleados.model.BaseDatos;
 import mx.edu.unam.sistemaempleados.model.Empleado;
 import mx.edu.unam.sistemaempleados.model.Gerente;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import datos.BaseDatos;
 public class Mainprueba {
     public static void main(String[] args) {
         System.out.println("Iniciando el sistema de gestión de empleados...");
