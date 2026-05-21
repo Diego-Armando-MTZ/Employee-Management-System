@@ -1,15 +1,15 @@
 package mx.edu.unam.sistemaempleados.model;
 
 public class Gerente extends Empleado {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 2L;
     
     private double bonoanual;
     private double presupuesto;
     private String departamentos;
 
-    public Gerente(String id, String nombre, double salario, String puesto, String area,
-         String password, double bonoanual, double presupuesto, String departamentos) {
-        super(id, nombre, salario, "Gerente", area, password);
+    public Gerente(String id, String nombres, String apellidos, double salario, String area,
+        String password, double bonoanual, double presupuesto, String departamentos) {
+        super(id, nombres, apellidos, salario, "Gerente", area, password);
         this.bonoanual = bonoanual;
         this.presupuesto = presupuesto;
         this.departamentos = departamentos;
@@ -23,5 +23,7 @@ public class Gerente extends Empleado {
     public void setPresupuesto(double presupuesto) {this.presupuesto = presupuesto;}
     public void setDepartamentos(String departamentos) {this.departamentos = departamentos;}
 
-    public double calcularSalario() {return this.salario + this.bonoanual;}
+    @Override
+    public double calcularSalario() {return getSalario() + this.bonoanual;}
+    public String toString() {return super.toString() + " | Presupuesto: $" + this.presupuesto + " | Bono: $" + this.bonoanual;}
 }
